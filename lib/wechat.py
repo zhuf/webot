@@ -9,7 +9,7 @@ import time
 from jinja2 import Environment, FileSystemLoader
 
 # 检查签名
-def checksignature(query, token):
+def checkSignature(query, token):
     signature = query.get('signature', '')
     timestamp = query.get('timestamp', '')
     nonce = query.get('nonce', '')
@@ -23,21 +23,21 @@ def checksignature(query, token):
 
 # 将内容回复给微信的封装方法
 # http://mp.weixin.qq.com/wiki/index.php?title=发送被动响应信息
-def reply(msgtype, content, fromusername, tousername):
+def reply(msgType, content, fromUsername, toUsername):
     '''
         reply('text', '朱峰', 'zhu', 'feng')
-        #reply('image', {'mediaid':'media_id'}, 'zhu', 'feng')
-        #reply('voice', {'mediaid':'media_id'}, 'zhu', 'feng')
-        #reply('video', {'mediaid':'media_id', 'title':'abc', 'description':'abc'}, 'zhu', 'feng')
-        reply('music', {'title':'abc', 'description':'abc', 'musicurl':'music_url','hqmusicurl':'hq_music_url'},'zhu', 'feng')
-        reply('news', [{'title':'abc1', 'description':'abc1','picurl':'pic_url1','url':'url1'}, {'title':'abc2', 'description':'abc2','picurl':'pic_url2','url':'url2'}], 'zhu', 'feng')
+        #reply('image', {'mediaId':'media_id'}, 'zhu', 'feng')
+        #reply('voice', {'mediaId':'media_id'}, 'zhu', 'feng')
+        #reply('video', {'mediaId':'media_id', 'title':'abc', 'description':'abc'}, 'zhu', 'feng')
+        reply('music', {'title':'abc', 'description':'abc', 'musicUrl':'music_url','hqMusicUrl':'hq_music_url'},'zhu', 'feng')
+        reply('news', [{'title':'abc1', 'description':'abc1','picUrl':'pic_url1','url':'url1'}, {'title':'abc2', 'description':'abc2','picUrl':'pic_url2','url':'url2'}], 'zhu', 'feng')
     '''
 
     env = Environment(loader=FileSystemLoader('./'))
     template = env.get_template('tpl.txt')
 
 
-    return template.render(touser=tousername, fromuser=fromusername,
-        createtime=str(int(time.time())), msgtype=msgtype, content=content).encode('utf-8')
+    return template.render(toUser=toUsername, fromUser=fromUsername,
+        createTime=str(int(time.time())), msgType=msgType, content=content).encode('utf-8')
 
 
