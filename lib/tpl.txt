@@ -4,41 +4,41 @@
 <CreateTime>{{ createtime }}</CreateTime>
 <MsgType><![CDATA[{{ msgtype }}]]></MsgType>
 {% if msgtype == 'text' %}
-	<Content><![CDATA[{{ content }}]]></Content>
+    <Content><![CDATA[{{ content }}]]></Content>
 {% elif msgtype == 'image' %}
-	<Image>
-		<MediaId><![CDATA[{{ content.mediaid }}]]></MediaId>
-	</Image>
+    <Image>
+        <MediaId><![CDATA[{{ content.mediaid }}]]></MediaId>
+    </Image>
 {% elif msgtype == 'voice' %}
-	<Voice>
-		<MediaId><![CDATA[{{ content.mediaid }}]]></MediaId>
-	</Voice>
+    <Voice>
+        <MediaId><![CDATA[{{ content.mediaid }}]]></MediaId>
+    </Voice>
 {% elif msgtype == 'video' %}
-	<Video>
-		<MediaId><![CDATA[{{ content.mediaid }}]]></MediaId>
-		<Title><![CDATA[{{ content.title }}]]></Title>
-		<Description><![CDATA[{{ content.description }}]]></Description>
-	</Video>
+    <Video>
+        <MediaId><![CDATA[{{ content.mediaid }}]]></MediaId>
+        <Title><![CDATA[{{ content.title }}]]></Title>
+        <Description><![CDATA[{{ content.description }}]]></Description>
+    </Video>
 {% elif msgtype == 'music' %}
-	<Music>
-		<Title><![CDATA[{{ content.title }}]]></Title>
-		<Description><![CDATA[{{ content.description }}]]></Description>
-		<MusicUrl><![CDATA[{{ content.musicurl }}]]></MusicUrl>
-		<HQMusicUrl><![CDATA[{{ content.hqmusicurl }}]]></HQMusicUrl>
-	</Music>
+    <Music>
+        <Title><![CDATA[{{ content.title }}]]></Title>
+        <Description><![CDATA[{{ content.description }}]]></Description>
+        <MusicUrl><![CDATA[{{ content.musicurl }}]]></MusicUrl>
+        <HQMusicUrl><![CDATA[{{ content.hqmusicurl }}]]></HQMusicUrl>
+    </Music>
 {% elif msgtype == 'news' %}
-	<ArticleCount>{{ content|length }}</ArticleCount>
-	<Articles>
-		{% for item in content %}
-			<item>
-				<Title><![CDATA[{{ item.title }}]]></Title>
-				<Description><![CDATA[{{ item.description }}]]></Description>
-				<PicUrl><![CDATA[{{ item.picurl }}]]></PicUrl>
-        		<Url><![CDATA[{{ item.url }}]]></Url>
-			</item>
-		{% endfor %}
-	</Articles>
+    <ArticleCount>{{ content|length }}</ArticleCount>
+    <Articles>
+        {% for item in content %}
+            <item>
+                <Title><![CDATA[{{ item.title }}]]></Title>
+                <Description><![CDATA[{{ item.description }}]]></Description>
+                <PicUrl><![CDATA[{{ item.picurl }}]]></PicUrl>
+                <Url><![CDATA[{{ item.url }}]]></Url>
+            </item>
+        {% endfor %}
+    </Articles>
 {% else %}
-	<Content><![CDATA[{{ content }}]]></Content>
+    <Content><![CDATA[{{ content }}]]></Content>
 {% endif %}
 </xml>
