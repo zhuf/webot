@@ -59,13 +59,9 @@ class API():
         self.preRequest()
 
         req = urllib2.Request(url, json.dumps(menu, ensure_ascii=False))
-
         f = urllib2.urlopen(req)
 
-        tmp = wrapper(f.read())
-        f.close()
-
-        return tmp
+        return wrapper(f.read())
 
     '''
         获取菜单
