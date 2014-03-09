@@ -7,6 +7,7 @@ sys.setdefaultencoding('utf-8')
 import hashlib
 import time
 from jinja2 import Environment, FileSystemLoader
+import xml.etree.ElementTree as ET
 
 # 检查签名
 def checkSignature(query, token):
@@ -40,4 +41,14 @@ def reply(msgType, content, fromUsername, toUsername):
     return template.render(toUser=toUsername, fromUser=fromUsername,
         createTime=str(int(time.time())), msgType=msgType, content=content).encode('utf-8')
 
+
+# 从微信的提交中提取XML文件
+# 返回为dict
+def getMessage(stream):
+    xml_recv = ET.fromstring(stream)
+    message = {}
+    for child in xml_recv:
+        message[child.tag] = child.text
+
+    return message
 
