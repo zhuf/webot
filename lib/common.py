@@ -12,17 +12,17 @@ from util import wrapper, postjson
 # 根据appid和appsecret 创建API
 # a = API('wx56cd36af256adcd0', 'c19b70c35825e1ebfad11c3ee428e')
 # a = API('wx56cd36af256adcd0', 'c19b70c35825e1ebfad11c3ee428e5bb')
-class API():
+class API:
 
-    def __init__(self, appid, appsecret):
+    def __init__(self, appid, appsecret, token='', expireTime=0):
         self.appid = appid
         self.appsecret = appsecret
         self.prefix = 'https://api.weixin.qq.com/cgi-bin/'
         self.mpPrefix = 'https://mp.weixin.qq.com/cgi-bin/'
         self.fileServerPrefix = 'http://file.api.weixin.qq.com/cgi-bin/'
 
-        self.token = ''
-        self.expireTime = 0
+        self.token = token
+        self.expireTime = expireTime
 
     '''
         根据创建API时传入的appid和appsecret获取access_token
