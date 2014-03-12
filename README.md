@@ -19,3 +19,5 @@ the python version of [node-webot](https://github.com/node-webot/wechat)
 ### changelog
 - 2013-03-09:
 	* 完成checkSignature, reply, getMessage, 基本api
+- 2013-03-12:
+	* 调整common.py结构
