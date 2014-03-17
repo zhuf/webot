@@ -11,7 +11,7 @@ from common import *
 # access_token = getAccessToken('gh_56f50354626a', 'wx56cd36af256adcd0', 'c19b70c35825e1ebfad11c3ee428e5bb')
 # print access_token
 
-access_token = 'yknAIYfPASWlXT4kPOqRuK6sN5KUGorz7TUqx9YRZX_KSS9HjGnhKSyH3FELBV9Yaq7MRwqzd13NFzLb0qzFaclWXG3HTGAMym9Cv-TG03LKt5HBynVpfvTMDuDd5WG8cuvEAfTCqzFq41kKJOleqA'
+access_token = 'xTrd7JUY-MCeDfSfZrxRWi9Eml_9phHbOoGECPwxoP65027e8RzXs79dOgkwCMbx3Q3RQlLlbb_cHtZIIHz1LvRhXlPrW2-Zga0MW08SfGD_GsC9pfPcGHuXUVsAdYYgG2PpEnzgi8-bpDincBPQPg'
 
 
 # print removeMenu(access_token)
@@ -19,7 +19,7 @@ access_token = 'yknAIYfPASWlXT4kPOqRuK6sN5KUGorz7TUqx9YRZX_KSS9HjGnhKSyH3FELBV9Y
 # print getMenu(access_token)
 
 
-# menu = {"button":[{"type":"view","name":"2048","url":"http://gabrielecirulli.github.io/2048/"},{"type":"click","name":"歌手简介","key":"V1001_TODAY_SINGER"},{"name":"菜单","sub_button":[{"type":"view","name":"搜索","url":"http://www.soso.com/"},{"type":"view","name":"视频","url":"http://v.qq.com/"},{"type":"click","name":"赞一下我们","key":"V1001_GOOD"}]}]}
+# menu = {"button":[{"type":"view","name":"首页","url":"http://wei3h.com"},{"type":"view","name":"2048","url":"http://gabrielecirulli.github.io/2048/"},{"name":"菜单","sub_button":[{"type":"view","name":"搜索","url":"http://www.soso.com/"},{"type":"view","name":"视频","url":"http://v.qq.com/"},{"type":"click","name":"赞一下我们","key":"V1001_GOOD"}]}]}
 
 # print createMenu(access_token, menu)
 
@@ -48,6 +48,6 @@ access_token = 'yknAIYfPASWlXT4kPOqRuK6sN5KUGorz7TUqx9YRZX_KSS9HjGnhKSyH3FELBV9Y
 # print createTmpQRCode(access_token, 111)
 # print createLimitQRCode(access_token, 1)
 # print showQRCodeURL('gQGB8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3lFT0hkNGZtalFmMDNCMldzR19tAAIEfIggUwMEAAAAAA==')
-print getQRCode(access_token)
+#print getQRCode(access_token)
 
 

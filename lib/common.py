@@ -135,7 +135,7 @@ def createGroup(access_token, group):
     url = PREFIX + 'groups/create?access_token=' + access_token
     req = urllib2.Request(url, json.dumps(group, ensure_ascii=False))
     f = urllib2.urlopen(req)
-    return wrapper(f.read())   
+    return wrapper(f.read())
 
 '''
     查询所有分组
@@ -152,7 +152,7 @@ def getUserGroup(access_token, openid):
     data = {'openid': openid}
     req = urllib2.Request(url, json.dumps(data))
     f = urllib2.urlopen(req)
-    return wrapper(f.read())    
+    return wrapper(f.read())
 
 '''
     修改分组名
@@ -162,7 +162,7 @@ def updateGroup(access_token, group):
     url = PREFIX + 'groups/update?access_token=' + access_token
     req = urllib2.Request(url, json.dumps(group, ensure_ascii=False))
     f = urllib2.urlopen(req)
-    return wrapper(f.read())    
+    return wrapper(f.read())
 
 '''
     移动用户分组
@@ -238,7 +238,7 @@ def sendVoice(access_token, openid, mediaId):
     }
     req = urllib2.Request(url, json.dumps(data))
     f = urllib2.urlopen(req)
-    return wrapper(f.read())    
+    return wrapper(f.read())
 
 # 视频消息
 def sendVideo(access_token, openid, mediaId, title='', description=''):
@@ -254,7 +254,7 @@ def sendVideo(access_token, openid, mediaId, title='', description=''):
     }
     req = urllib2.Request(url, json.dumps(data, ensure_ascii=False))
     f = urllib2.urlopen(req)
-    return wrapper(f.read())  
+    return wrapper(f.read())
 
 # 音乐消息
 def sendMusic(access_token, openid, musicurl, thumb_media_id='', hqmusicurl='', title='', description=''):
@@ -274,7 +274,7 @@ def sendMusic(access_token, openid, musicurl, thumb_media_id='', hqmusicurl='', 
     }
     req = urllib2.Request(url, json.dumps(data, ensure_ascii=False))
     f = urllib2.urlopen(req)
-    return wrapper(f.read())   
+    return wrapper(f.read())
 
 # 图文消息
 def sendNews(access_token, openid, articles):
@@ -288,7 +288,7 @@ def sendNews(access_token, openid, articles):
     }
     req = urllib2.Request(url, json.dumps(data, ensure_ascii=False))
     f = urllib2.urlopen(req)
-    return wrapper(f.read())  
+    return wrapper(f.read())
 
 
 
