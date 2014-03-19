@@ -11,17 +11,35 @@ from common import *
 # access_token = getAccessToken('gh_56f50354626a', 'wx56cd36af256adcd0', 'c19b70c35825e1ebfad11c3ee428e5bb')
 # print access_token
 
-access_token = 'xTrd7JUY-MCeDfSfZrxRWi9Eml_9phHbOoGECPwxoP65027e8RzXs79dOgkwCMbx3Q3RQlLlbb_cHtZIIHz1LvRhXlPrW2-Zga0MW08SfGD_GsC9pfPcGHuXUVsAdYYgG2PpEnzgi8-bpDincBPQPg'
+access_token = 'bkfxi7n_NudAZceydWfYAsiYN2v-vX7F8b9sMmvbA-BjMpQhtFPGuXAYSz_UC-7TrlCeGuDoYv5idIkm1luoXGHfaJTMdqqAhL2gHgr6xk3PAc1q2wu2Yq9vo6OzdeqvMxZwsHLmb3AEvlr85GINjg'
 
 
-# print removeMenu(access_token)
+print removeMenu(access_token)
 
-# print getMenu(access_token)
+print getMenu(access_token)
 
 
-# menu = {"button":[{"type":"view","name":"首页","url":"http://wei3h.com"},{"type":"view","name":"2048","url":"http://gabrielecirulli.github.io/2048/"},{"name":"菜单","sub_button":[{"type":"view","name":"搜索","url":"http://www.soso.com/"},{"type":"view","name":"视频","url":"http://v.qq.com/"},{"type":"click","name":"赞一下我们","key":"V1001_GOOD"}]}]}
+menu = {"button":
+            [
+                {"type":"view","name":"首页","url":"http://www.wei3h.com"},
+                {"name":"生活娱乐","sub_button":
+                    [
+                        {"type":"view","name":"2048","url":"http://www.wei3h.com/games/2048/"},
+                        {"type":"view","name":"今日影讯","url":"http://m.mtime.cn/"},
+                        {"type":"view","name":"天气预报","url":"http://m.hao123.com/a/tianqi/"}
+                    ]
+                },
+                {"name":"关于我们","sub_button":
+                    [
+                        {"type":"view","name":"微社区","url":"http://wsq.qq.com/"},
+                        {"type":"view","name":"视频","url":"http://v.qq.com/"},
+                        {"type":"click","name":"赞一下我们","key":"V1001_GOOD"}
+                    ]
+                }
+            ]
+        }
 
-# print createMenu(access_token, menu)
+print createMenu(access_token, menu)
 
 # print getGroups(access_token)
 
