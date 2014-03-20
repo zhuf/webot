@@ -11,7 +11,7 @@ from common import *
 # access_token = getAccessToken('gh_56f50354626a', 'wx56cd36af256adcd0', 'c19b70c35825e1ebfad11c3ee428e5bb')
 # print access_token
 
-access_token = 'bkfxi7n_NudAZceydWfYAsiYN2v-vX7F8b9sMmvbA-BjMpQhtFPGuXAYSz_UC-7TrlCeGuDoYv5idIkm1luoXGHfaJTMdqqAhL2gHgr6xk3PAc1q2wu2Yq9vo6OzdeqvMxZwsHLmb3AEvlr85GINjg'
+access_token = '6Nmm7uBiz6x0_lEG6zQ3VPT2KgUenOhIelzGL1UY5mADlvtPSY60TKlnI8gk31PwkK7Gza-d0RJTUpJ3QeorvNgRiJkSiZ4RgEeyzGBkDhH3UqFzsGXnnuR6CqMn-6bbRUaCmKgGQIST1OvIeSXLnw'
 
 
 print removeMenu(access_token)
@@ -25,6 +25,7 @@ menu = {"button":
                 {"name":"生活娱乐","sub_button":
                     [
                         {"type":"view","name":"2048","url":"http://www.wei3h.com/games/2048/"},
+                        {"type":"view","name":"糗事百科","url":"http://qiushibaike.com"},
                         {"type":"view","name":"今日影讯","url":"http://m.mtime.cn/"},
                         {"type":"view","name":"天气预报","url":"http://m.hao123.com/a/tianqi/"}
                     ]
